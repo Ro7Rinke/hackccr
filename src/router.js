@@ -13,10 +13,12 @@ const App = () => (
     <Router>
         <Scene key="root">
             <Scene key="login" component={Login} title="Login" />
-            <Scene key="tabbar" tabs tabBarStyle={{ backgroundColor: 'black' }} >
-                    <Scene key='hometab' title='Home' initial component={Home} icon={tabIcon} renderBackButton={()=>(null)}/>
-                    <Scene key='testtab' title='Hometeset' component={Home} icon={tabIcon} renderBackButton={()=>(null)}/>
+            <Scene key="tabbar" tabs hideNavBar showLabel={false}>
+                <Scene key='testtab' title="Home" hideNavBar component={Home} icon={tabIcon} />
+                <Scene key='hometab' title="Chat" hideNavBar initial component={Home} icon={tabIcon} />
             </Scene>
+
+
         </Scene>
     </Router>
 );

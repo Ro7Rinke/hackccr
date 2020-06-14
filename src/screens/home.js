@@ -1,20 +1,21 @@
 import React from 'react';
 import {
-  View,
-  Text
+    View,
+    Text,
+    StyleSheet
 } from 'react-native';
 
 export default Home = () => {
-    return(
+    return (
         <View>
-            <Text style={}>Um texto aqui só pra falar q fununfou</Text>
+            <Text>Um texto aqui só pra falar q fununfou</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        
+    container: {
+
     },
-    
+
 })
