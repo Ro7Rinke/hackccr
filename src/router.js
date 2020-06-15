@@ -17,10 +17,9 @@ const App = () => (
         <Scene key="root">
             <Scene key="login" component={Login} title="Login" />
             <Scene key="tabbar" tabs hideNavBar showLabel={false}>
-                <Scene key='podcast' title="Podcast" hideNavBar component={Podcast} icon={tabIcon} />
+                <Scene key='hometab' title="Home" hideNavBar initial component={Home} icon={tabIcon} />
+                <Scene key='podcast' title="Categorias" hideNavBar component={Podcast} icon={tabIcon} />
                 <Scene key='chat' title="Chat" hideNavBar hideTabBar component={Chat} icon={tabIcon} />
-                <Scene key='hometab' title="Chat" hideNavBar initial component={Home} icon={tabIcon} />
-                <Scene key='podcastList' title="Lista" component={PodcastList} icon={tabIcon} />
             </Scene>
         </Scene>
     </Router>
