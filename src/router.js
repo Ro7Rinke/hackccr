@@ -5,6 +5,7 @@ import { Router, Stack, Scene } from 'react-native-router-flux'
 import Login from "./screens/login"
 import Home from "./screens/home"
 import Chat from "./screens/chat"
+import Podcast from './screens/podcast'
 import PodcastList from "./screens/podcastList"
 
 const tabIcon = ({ selected, title }) => {
@@ -16,7 +17,7 @@ const App = () => (
         <Scene key="root">
             <Scene key="login" component={Login} title="Login" />
             <Scene key="tabbar" tabs hideNavBar showLabel={false}>
-                <Scene key='testtab' title="Home" hideNavBar component={Home} icon={tabIcon} />
+                <Scene key='podcast' title="Podcast" hideNavBar component={Podcast} icon={tabIcon} />
                 <Scene key='chat' title="Chat" hideNavBar hideTabBar component={Chat} icon={tabIcon} />
                 <Scene key='hometab' title="Chat" hideNavBar initial component={Home} icon={tabIcon} />
                 <Scene key='podcastList' title="Lista" component={PodcastList} icon={tabIcon} />
