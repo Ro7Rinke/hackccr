@@ -15,7 +15,6 @@ export default Login = () => {
 
     const onSend= (message) => {
         if(message[0] && message[0].text && message[0].text != ""){
-            console.log(isReply)
             if(isReply) {
                 setIsReply(false)
                 setMsgs(GiftedChat.append(msgs, [{_id: `${Date.now()}${Math.random}`, user:{_id: 2}, createdAt: Date.now(), text: "Sua resposta foi registrada com sucesso"}, ...message]))
