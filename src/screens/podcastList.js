@@ -3,7 +3,8 @@ import {
     View,
     Text,
     StyleSheet,
-    Image
+    Image,
+    Dimensions
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -21,21 +22,21 @@ const women = require('../../assets/images/women.jpg')
 const cigarro = require('../../assets/images/cigarro.jpg')
 const comprimido = require('../../assets/images/comprimido.jpg')
 
-
+const windowWidth = Dimensions.get('window').width;
 
 const DATA = [
     {
-        id: 'bd7acbeautruasdsaasdyr-c1b1-46c2-aed5-3ad53abb28ba',
+        id: 'bd7acbeautruasdsaaasdasdsdyr-c1b1-46c2-aed5-3ad53abb28ba',
         author: "Hoje saéde",
         title: 'Cuidados na Farmacia',
         image: comprimido
     }, {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        id: 'bd7acbea-c1b1-46c2-aedbvcbcv5-3ad53abb28ba',
         author: "SaúdeCast",
         title: 'Não fume!',
         image: cigarro
     }, {
-        id: 'bd7acbea-c1b1-46cert2-aed5-3ad53abb28ba',
+        id: 'bd7acbea-cxcvb1b1-46cert2-aed5-3ad53abb28ba',
         author: "SaúdeCast",
         title: 'Cuide da sua coluna',
         image: back
@@ -45,7 +46,7 @@ const DATA = [
         title: 'Cuidados com a mente',
         image: men
     }, {
-        id: 'bd7acbeautruyr-c1b1-46c2-aed5-3ad53abb28ba',
+        id: 'bd7acbeautruyr-c1b1-46c2-aed5-3ad53xcvabb28ba',
         author: "Astral",
         title: 'Paz Interior',
         image: women
@@ -64,14 +65,9 @@ const DATA = [
         author: "Casos de Familía",
         title: 'Cuidados com a mente',
         image: men
-    }, {
-        id: 'bd7acbeautruasdsaasdyr-c1b1-46c2-aed5-3ad53abb28ba',
-        author: "Astral",
-        title: 'Paz Interior',
-        image: women
     },
     {
-        id: 'bd7acbeautruasdsaasdyr-c1b1-46c2-aed5-3ad53abb28ba',
+        id: 'bd7acbeautruasdsaazxcsdyr-c1b1-46c2-aed5-3ad53abb28ba',
         author: "Hoje saéde",
         title: 'Cuidados na Farmacia',
         image: comprimido
@@ -98,7 +94,7 @@ const renderPodCast = (item) => {
 export default PodcastList = () => {
     return (
         <View style={globalStyles.globalContainer}>
-            <View style={{ width: "100%", justifyContent: "center", marginTop: "5%", marginLeft: "3%" }}>
+            <View style={{ width: "100%", justifyContent: "center", marginTop: "5%", marginLeft: "3%", marginBottom: "5%" }}>
                 <Text style={[globalStyles.title, {}]}>PodCasts sobre Saúde:</Text>
             </View>
             <FlatList
@@ -108,6 +104,25 @@ export default PodcastList = () => {
                 style={{ height: "100%" }}
                 ItemSeparatorComponent={() => <View style={globalStyles.hr} />}
             />
+
+
+            <View style={{ height: "13%", width: windowWidth, backgroundColor: "#DDD", position: "absolute", bottom: 0 }}>
+                <View style={globalStyles.hr} />
+                <View style={{ height: "100%", alignItems: "center", justifyContent: "space-between", flexDirection: "row" }}>
+                    <View style={{ margin: 10, height: 50, width: 50, backgroundColor: "#DDD", }}>
+                        <Image source={saude} resizeMode={"cover"} style={{ height: "100%", width: "100%" }} />
+
+                    </View>
+                    < View style={{ width: "40%", marginRight: "17%", }}>
+                        <Text style={{ fontSize: 15, fontWeight: "bold" }}>PodCast Saúde</Text>
+                        <Text style={{ fontSize: 13 }} numberOfLines={1}>Dr. José Antônio explica os beneficios da boa alimentação</Text>
+                    </View>
+                    <Icon name="pause-circle-outline" size={50} style={{ marginRight: "5%" }} />
+
+                </View>
+                <View style={[globalStyles.hr, { position: "absolute", bottom: 0 }]} />
+
+            </View>
         </View>
     )
 }

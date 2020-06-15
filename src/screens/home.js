@@ -30,7 +30,7 @@ export default Home = () => {
                 </View>
                 <View style={{ width: "40%" }}>
                     <Text style={{ fontSize: 20, fontWeight: "bold" }}>PodCast Saúde</Text>
-                    <Text>Dr. José Antônio explica os beneficios da boa alimentação</Text>
+                    <Text >Dr. José Antônio explica os beneficios da boa alimentação</Text>
                     <Text style={{ fontSize: 17, fontWeight: "bold", color: "#e61919" }}>● AO VIVO</Text>
                 </View>
                 <Icon name="play-circle-outline" size={70} style={{ marginRight: "5%" }} />
